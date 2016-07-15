@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Edge_EmailCrossell>
+            <version>1.0.0</version>
+        </Edge_EmailCrossell>
+    </modules>
+    <global>
+        <blocks>
+            <emailcrossell>
+                <class>Edge_EmailCrossell_Block</class>
+            </emailcrossell>
+        </blocks>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <emailcrossell>
+                    <file>edge/emailcrossell.xml</file>
+                </emailcrossell>
+            </updates>
+        </layout>
+    </frontend>
+</config>

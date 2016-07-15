@@ -1,0 +1,26 @@
+<?php
+/**
+ * To use the template in your sales emails, add the following line to your email template:
+ * {{layout handle="sales_email_crossell" order=$order}}
+ */
+?>
+<?php if($this->getItemCount()): ?>
+<table cellpaddng="0" cellspacing="0" border="0" width="100%" class="products-grid">
+    <tr>
+        <td colspan="4" class="crossell">
+            <h6 class="crossells-title"><?php echo $this->__('Based on your selection, you may be interested in the following items:') ?></h6>
+        </td>
+    </tr>
+    <tr>
+        <?php foreach ($this->getItems() as $_item): ?>
+        <td class="crossell">
+            <a class="product-image" href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->escapeHtml($_item->getName()) ?>"><img src="<?php echo $this->helper('catalog/image')->init($_item, 'thumbnail')->resize(155); ?>" width="155" height="155" alt="<?php echo $this->escapeHtml($_item->getName()) ?>" /></a>
+            <div class="product-details">
+                <h3 class="product-name"><a href="<?php echo $_item->getProductUrl() ?>"><?php echo $this->escapeHtml($_item->getName()) ?></a></h3>
+                <?php echo $this->getPriceHtml($_item, true) ?>
+            </div>
+        </td>
+        <?php endforeach; ?>
+    </tr>
+</table>
+<?php endif; ?>

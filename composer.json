@@ -1,0 +1,23 @@
+{
+    "name": "outeredge/magento-emailcrossell-module",
+    "type": "magento-module",
+    "description": "Email Crossells module for Magento by outer/edge",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "outer/edge",
+            "email": "support@outeredgeuk.com"
+        }
+    ],
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "extra": {
+        "map": [
+            ["app/code/local/Edge/EmailCrossell", "app/code/local/Edge/EmailCrossell"],
+            ["app/etc/modules/Edge_EmailCrossell.xml", "app/etc/modules/Edge_EmailCrossell.xml"],
+            ["app/design/frontend/base/default/layout/edge/emailcrossell.xml", "app/design/frontend/base/default/layout/edge/emailcrossell.xml"],
+            ["app/design/frontend/base/default/template/edge/emailcrossell", "app/design/frontend/base/default/template/edge/emailcrossell"]
+        ]
+    }
+}

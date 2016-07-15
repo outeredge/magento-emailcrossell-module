@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+    <sales_email_crossell>
+        <block type="emailcrossell/order_email_items_crossell" name="emailcrossells" template="edge/emailcrossell/email/order/items/crossell.phtml" />
+    </sales_email_crossell>
+</layout>
